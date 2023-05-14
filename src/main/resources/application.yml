@@ -1,0 +1,17 @@
+spring:
+  sql:
+    init:
+      schema-locations:
+        - classpath:schema.sql
+        - classpath:data.sql
+  r2dbc:
+    url: r2dbc:h2:mem:///service
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+
+logging:
+  level:
+    org.springframework.r2dbc: DEBUG
